@@ -1,6 +1,6 @@
 # 2374802010205-Giang Huy Khai – Smart CRM · Luồng L2: Tiếp nhận và phân loại yêu cầu bảo hành
 
-**Repo:** https://github.com/Tolexengnaa/237480201is11-warranty-app · **Phiên bản nộp Bài tập 2:** `v0.2`
+**Repo:** https://github.com/huykhaii2/cdtn1-baitap02 · **Phiên bản nộp Bài tập 2:** `v0.2`
 
 Đồ án học phần **Chuyên đề tốt nghiệp 1** – Trường Đại học Văn Lang, Khoa Công nghệ Thông tin – Học kỳ 1, năm học 2026 – 2027.
 
