@@ -51,7 +51,7 @@ Mỗi bước một lệnh, chạy lần lượt trong terminal. Lệnh `psql` �
 
 | # | Việc | Lệnh |
 |---|---|---|
-| 1 | Lấy mã nguồn bản nộp | `git clone --branch v0.2 https://github.com/Tolexengnaa/237480201is11-warranty-app.git` |
+| 1 | Lấy mã nguồn bản nộp | `git clone --branch v0.2 gh repo clone huykhaii2/cdtn1-baitap02` |
 | 2 | Vào thư mục dự án | `cd 237480201is11-warranty-app` |
 | 3 | Cài thư viện | `npm install` |
 | 4 | Tạo tài khoản CSDL | `psql -U postgres -c "CREATE USER smartcrm WITH PASSWORD 'smartcrm';"` |
