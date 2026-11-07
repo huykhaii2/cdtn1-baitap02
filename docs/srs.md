@@ -13,8 +13,10 @@
 | **Lớp** |71k29cntt03 |
 | **Giảng viên** | ThS. Tran Van Thanh |
 | **Ngày nộp** | 19/10/2026 |
+<<<<<<< HEAD
 | **GitHub repo** | gh repo clone huykhaii2/cdtn1-baitap02 |
-
+=======
+| **GitHub repo** | https://github.com/huykhaii2/cdtn1-baitap02.git |
 > File này là nguồn Markdown của file PDF nộp`). Sơ đồ gốc nằm cùng thư mục `docs/` (`*.drawio`); ảnh xuất nằm trong `docs/export/`; DDL nằm ở `db/schema.sql`.
 
 ---
@@ -319,8 +321,7 @@ CREATE INDEX idx_log_ticket_time ON ticket_status_log (ticket_id, changed_at);
 
 ## PHỤ LỤC – BẢNG KHAI BÁO SỬ DỤNG CÔNG CỤ AI
 
-**Cách em làm việc với AI.** Em cung cấp đề bài, slide buổi 6 và luồng đã được duyệt (L2, track SE), yêu cầu Claude soạn bản nháp **từng phần một**, đọc lại từng phần trước khi làm phần tiếp theo, rồi tự hoàn thiện và kiểm chứng. Phần em tự làm ghi ở dòng cuối bảng. Toàn bộ file gốc (`.drawio`, `schema.sql`, `srs.md`) nằm trong repo: https://github.com/Tolexengnaa/237480201is11-warranty-app
-
+**Cách em làm việc với AI.** Em cung cấp đề bài, slide buổi 6 và luồng đã được duyệt (L2, track SE), yêu cầu Claude soạn bản nháp **từng phần một**, đọc lại từng phần trước khi làm phần tiếp theo, rồi tự hoàn thiện và kiểm chứng. Phần em tự làm ghi ở dòng cuối bảng. Toàn bộ file gốc (`.drawio`, `schema.sql`, `srs.md`) nằm trong repo: https://github.com/huykhaii2/cdtn1-baitap02.git
 | Công cụ | Phần áp dụng | Cách dùng (tóm tắt yêu cầu đã gửi) | Em đã chỉnh sửa / kiểm chứng gì |
 |---|---|---|---|
 | Claude (Anthropic) – trợ lý AI dạng chat | Mục 1 – SRS: thuật ngữ, vai trò, FR1–FR6, US1–US7, NFR1–NFR5, BR1–BR6, bảng truy vết | Gửi đề bài và slide buổi 6, nêu luồng L2 – track SE; yêu cầu soạn bản nháp SRS đủ 6 mục theo mẫu của đề | Đếm lại theo yêu cầu tối thiểu của đề: 6 FR (≥ 4), 7 US (5–7), 5 NFR đều có ngưỡng số (≥ 3), 6 quy tắc (≥ 3). Kiểm bảng truy vết FR → US → UC → bảng dữ liệu → màn hình không còn ô trống. Đối chiếu BR1, BR3, BR4 với Bảng 9.1 của case study và ghi nguồn ở cột Nguồn (mục 1.5); BR2, BR5, BR6 là phân tích của em |
@@ -333,6 +334,6 @@ CREATE INDEX idx_log_ticket_time ON ticket_status_log (ticket_id, changed_at);
 
 **Cam kết.** Tôi xác nhận đã đọc, hiểu và chịu trách nhiệm về toàn bộ nội dung nộp. Các phần có sử dụng AI đã được khai báo đầy đủ ở bảng trên và đã được tôi kiểm chứng lại.
 
-**Họ tên:** MINGBOUPPHA XAYKHAM · **MSSV:** 237480201is11 · **Lớp:** 261_71ITGR40203_03 · **Ngày:** 09/10/2026
+**Họ tên:** Giang Huy Khai · **MSSV:** 22374802010205 · **Lớp:** 71k29cntt03 · **Ngày:** 09/10/2026
 
-**Link GitHub repo (file `.drawio` gốc, `schema.sql`, `srs.md`):** https://github.com/Tolexengnaa/237480201is11-warranty-app
+**Link GitHub repo (file `.drawio` gốc, `schema.sql`, `srs.md`):** https://github.com/huykhaii2/cdtn1-baitap02.git

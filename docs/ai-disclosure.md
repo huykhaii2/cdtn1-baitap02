@@ -1,6 +1,6 @@
 # PHỤ LỤC – BẢNG KHAI BÁO SỬ DỤNG CÔNG CỤ AI
 
-**Cách em làm việc với AI.** Em cung cấp đề bài, slide buổi 6 và luồng đã được duyệt (L2, track SE), yêu cầu Claude soạn bản nháp **từng phần một**, đọc lại từng phần trước khi làm phần tiếp theo, rồi tự hoàn thiện và kiểm chứng. Phần em tự làm ghi ở dòng cuối bảng. Toàn bộ file gốc (`.drawio`, `schema.sql`, `srs.md`) nằm trong repo: https://github.com/Tolexengnaa/237480201is11-warranty-app
+**Cách em làm việc với AI.** Em cung cấp đề bài, slide buổi 6 và luồng đã được duyệt (L2, track SE), yêu cầu Claude soạn bản nháp **từng phần một**, đọc lại từng phần trước khi làm phần tiếp theo, rồi tự hoàn thiện và kiểm chứng. Phần em tự làm ghi ở dòng cuối bảng. Toàn bộ file gốc (`.drawio`, `schema.sql`, `srs.md`) nằm trong repo: https://github.com/huykhaii2/cdtn1-baitap02.git
 
 | Công cụ | Phần áp dụng | Cách dùng (tóm tắt yêu cầu đã gửi) | Em đã chỉnh sửa / kiểm chứng gì |
 |---|---|---|---|
@@ -19,4 +19,4 @@
 
 **Họ tên:** GIang Huy Khai · **MSSV:** 2374802010205 · **Lớp:** 71k29cntt03 · **Ngày:** 19/10/2026
 
-**Link GitHub repo (file `.drawio` gốc, `schema.sql`, `srs.md`):** https://github.com/Tolexengnaa/237480201is11-warranty-app
+**Link GitHub repo (file `.drawio` gốc, `schema.sql`, `srs.md`):**https://github.com/huykhaii2/cdtn1-baitap02.git
