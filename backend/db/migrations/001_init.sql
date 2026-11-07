@@ -1,0 +1,48 @@
+CREATE TABLE IF NOT EXISTS customer (
+  id SERIAL PRIMARY KEY,
+  full_name VARCHAR(120) NOT NULL,
+  phone VARCHAR(20) NOT NULL UNIQUE,
+  email VARCHAR(160),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE TABLE IF NOT EXISTS device (
+  id SERIAL PRIMARY KEY,
+  customer_id INTEGER NOT NULL REFERENCES customer(id) ON DELETE CASCADE,
+  device_name VARCHAR(120) NOT NULL,
+  serial_number VARCHAR(80) NOT NULL UNIQUE,
+  purchase_date DATE,
+  warranty_expiry DATE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE TABLE IF NOT EXISTS issue_category (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL UNIQUE,
+  description TEXT
+);
+CREATE TABLE IF NOT EXISTS ticket (
+  id SERIAL PRIMARY KEY,
+  ticket_code VARCHAR(24) NOT NULL UNIQUE,
+  customer_id INTEGER NOT NULL REFERENCES customer(id),
+  device_id INTEGER NOT NULL REFERENCES device(id),
+  category_id INTEGER NOT NULL REFERENCES issue_category(id),
+  issue_description TEXT NOT NULL,
+  status VARCHAR(30) NOT NULL DEFAULT 'NEW' CHECK (status IN ('NEW','CLASSIFYING','IN_PROGRESS','WAITING_PARTS','COMPLETED','REJECTED')),
+  priority VARCHAR(20) NOT NULL DEFAULT 'NORMAL' CHECK (priority IN ('LOW','NORMAL','HIGH','URGENT')),
+  received_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE TABLE IF NOT EXISTS ticket_status_log (
+  id SERIAL PRIMARY KEY,
+  ticket_id INTEGER NOT NULL REFERENCES ticket(id) ON DELETE CASCADE,
+  old_status VARCHAR(30),
+  new_status VARCHAR(30) NOT NULL,
+  note TEXT,
+  changed_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE TABLE IF NOT EXISTS warranty_review (
+  id SERIAL PRIMARY KEY,
+  ticket_id INTEGER NOT NULL UNIQUE REFERENCES ticket(id) ON DELETE CASCADE,
+  is_covered BOOLEAN,
+  review_note TEXT,
+  reviewed_at TIMESTAMPTZ
+);

@@ -1,0 +1,14 @@
+require('dotenv').config();
+const express = require('express');
+const path = require('path');
+const pool = require('./db/pool');
+const tickets = require('./routes/tickets');
+const app = express();
+app.use(express.json());
+app.use(express.static(path.join(__dirname, '../frontend')));
+app.get('/api/health', async (_req,res) => { try { await pool.query('SELECT 1'); res.json({ok:true, service:'Mekong Mobile Warranty CRM'}); } catch { res.status(503).json({ok:false, message:'Không kết nối được cơ sở dữ liệu'}); } });
+app.use('/api/tickets', tickets);
+app.use((err,_req,res,_next) => { console.error(err); res.status(err.status || 500).json({message:err.status ? err.message : 'Có lỗi máy chủ. Kiểm tra cấu hình cơ sở dữ liệu.'}); });
+const port = process.env.PORT || 3000;
+if (require.main === module) app.listen(port, () => console.log(`Mekong Mobile CRM chạy tại http://localhost:${port}`));
+module.exports = app;
